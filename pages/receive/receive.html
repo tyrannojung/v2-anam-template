@@ -6,7 +6,6 @@
     <title>Receive Coin</title>
     <link rel="stylesheet" href="../../app.css" />
     <link rel="stylesheet" href="receive.css" />
-    <script src="../../app.js"></script>
   </head>
   <body>
     <div class="container">
@@ -47,12 +46,14 @@
     </div>
 
     <!-- 필요한 라이브러리들 -->
+    <!-- 1. 외부 라이브러리 먼저 로드 -->
     <!-- QR 코드 생성 라이브러리 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     
-    <!-- 설정 및 어댑터는 app.js에 통합됨 -->
+    <!-- 2. 설정 및 어댑터 (app.js) -->
+    <script src="../../app.js"></script>
     
-    <!-- 메인 로직 -->
+    <!-- 3. 페이지별 로직 -->
     <script src="receive.js"></script>
   </body>
 </html>

@@ -276,12 +276,14 @@ function navigateToSend() {
     showToast("지갑이 없습니다");
     return;
   }
+  // blockchain miniapp은 anamUI 네임스페이스 사용
   if (window.anamUI && window.anamUI.navigateTo) {
     window.anamUI.navigateTo("pages/send/send");
   } else if (window.anam && window.anam.navigateTo) {
     window.anam.navigateTo("pages/send/send");
   } else {
-    console.error("navigateTo API not available");
+    // 개발 환경: 일반 HTML 페이지 이동
+    window.location.href = "../send/send.html";
   }
 }
 
@@ -291,12 +293,14 @@ function navigateToReceive() {
     showToast("지갑이 없습니다");
     return;
   }
+  // blockchain miniapp은 anamUI 네임스페이스 사용
   if (window.anamUI && window.anamUI.navigateTo) {
     window.anamUI.navigateTo("pages/receive/receive");
   } else if (window.anam && window.anam.navigateTo) {
     window.anam.navigateTo("pages/receive/receive");
   } else {
-    console.error("navigateTo API not available");
+    // 개발 환경: 일반 HTML 페이지 이동
+    window.location.href = "../receive/receive.html";
   }
 }
 

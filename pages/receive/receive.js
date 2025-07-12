@@ -77,12 +77,14 @@ function generateQRCode() {
 
 // 뒤로 가기
 function goBack() {
+  // blockchain miniapp은 anamUI 네임스페이스 사용
   if (window.anamUI && window.anamUI.navigateTo) {
     window.anamUI.navigateTo('pages/index/index');
   } else if (window.anam && window.anam.navigateTo) {
     window.anam.navigateTo('pages/index/index');
   } else {
-    console.error("navigateTo API not available");
+    // 개발 환경: 일반 HTML 페이지 이동
+    window.location.href = '../index/index.html';
   }
 }
 
